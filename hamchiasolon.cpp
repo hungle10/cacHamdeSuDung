@@ -1,16 +1,44 @@
-string divide(char dividend[], int divisor)
+#include<iostream>
+#include<string.h>
+#include<algorithm>
+using namespace std;
+string chiaSoLon(string A,long long b);
+void xoaSo0Dau(string &S);
+void daoNguoc(string &S);
+int main()
 {
-    string result;
-    int index = 0;
-    int temp = dividend[index] - '0'; 
-    while (temp < divisor)
-        temp = temp * 10 + (dividend[++index] - '0');
-    while (strlen(dividend+index) > 0)
-    {
-        result += (temp / divisor) + '0'; 
-        temp = (temp % divisor) * 10 + dividend[++index] - '0'; 
-    }
-    if (result.length() == 0) 
-        return "0";
-    return result;
+	string s1;
+	long long b;
+	getline(cin,s1);
+	fflush(stdin);
+	cin>>b;
+	string kq=chiaSoLon(s1,b);
+	cout<<kq;
+}
+string chiaSoLon(string A,long long b)
+{
+	int n=0;
+	int i=0;
+	string KQ="";
+	long long number=0;
+	while(i<A.length())
+	{
+		number=number*10+int(A[i]-'0');
+		KQ=KQ+char(number/b+'0');
+		number=number%b;
+		i++;
+	}
+	xoaSo0Dau(KQ);
+	return KQ;
+}
+void xoaSo0Dau(string &S)
+{
+	while(S[0]=='0')
+	{
+		    S.erase(S.begin() + 0); 
+	}
+}
+void daoNguoc(string &S)
+{
+	reverse(S.begin(),S.end());
 }
