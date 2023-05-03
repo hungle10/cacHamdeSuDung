@@ -81,9 +81,6 @@ void daoNguoc(string &S)
 }
 void xoaSo0(string &S)
 {
-	int l=S.length();
-	while(S[0]=='0')
-	{
-		S.erase(S.begin() + 0); 
-	}
+ while(S[0]=='0'&&S.length()>1)
+	        S.erase(S.begin()+0);
 }
