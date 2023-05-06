@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string.h>
 #define SIZE 100
+using namespace std;
 char H[SIZE];
 int P[SIZE];
 bool dayNgoac();
@@ -11,9 +12,8 @@ int cnt;
 int main()
 {
 	cnt=0;
-   std::cin>>m>>n;
+    cin>>m>>n;
 	lietKeNhiPhan(0);
-	std::cout<<cnt;
 }
 bool dayNgoac()
 {
@@ -51,7 +51,16 @@ void lietKeNhiPhan(int k)
 void xuat()
 {
 	if(dayNgoac()==true)
-	   cnt++;
+	   {
+	    for(int i=0;i<m;i++)
+	     {
+		  if(P[i]==0)
+	        cout<<"(";
+	     else 
+	       cout<<")";
+	      }
+	   cout<<endl;
+	   }
 }
 
 	    
