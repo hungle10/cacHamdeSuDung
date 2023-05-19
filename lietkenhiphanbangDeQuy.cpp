@@ -2,9 +2,8 @@
 using namespace std;
 void xuat(int X[],int n);
 void deQuy(int i);
-bool kiemTra();
 int n;
-int X[100];
+int X[25];
 int main()
 {
 
@@ -13,11 +12,9 @@ int main()
 }
 void xuat(int X[])
 {
-	if(kiemTra()==true)
-	{for(int i=1;i<=n;i++)
+	for(int i=1;i<=n;i++)
 	   cout<<X[i];
 	cout<<endl;
-    }
 }
 void deQuy(int i)
 {
@@ -30,11 +27,3 @@ void deQuy(int i)
 	   deQuy(i+1);
 	}
 }
-bool kiemTra()
-{
-	for(int i=0;i<n;i++)
-	   if(X[i]==1&&X[i+1]==1)
-	      return false;
-	return true;
-}
-
