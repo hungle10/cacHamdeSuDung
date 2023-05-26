@@ -1,6 +1,5 @@
-//phan bo cac phan tu cua mang M vao 2 nhom A va B sao cho chenh lech
-//giua TONG GIA TRI cac phan tu moi nhom la nho nhat 
-//CO THE AP DUNG CHO BAI CHIA KEO 
+//PHAN CAC PHAN TU VAO 2 NHOM A VA B SAO CHO CHENH LECH 
+//TONG CAC GIA TRI PHAN TU MOI NHOM LA NHO NHAT
 
 #include<iostream>
 #include<math.h>
@@ -8,38 +7,28 @@ using namespace std;
 void nhapMang(int A[],int &n,int &w);
 void taoBang(int A[],int n,int w);
 void truyVet(int A[],int n,int w);
-int F[21][10000];    //F[hang] tuy thuoc vao so luong phan tu de bai
-bool dapan[21]={false};
-
+int F[21][10000];  //bang phuong an F[n][10000] n tuy vao de bai
+bool dapan[21]={false};// su dung luc truy vet , true se la phan tu phan vao nhom A
 
 int main()
 {
 	int A[21];
-    int tongkeo=0;
-	int n;
-	int w;
+	int n,w;
 	nhapMang(A,n,w);
+    int tongMang=0;
 	for(int i=1;i<=n;i++)
-	    tongkeo=tongkeo+A[i];
+	    tongMang=tongMang+A[i];
 	taoBang(A,n,w);
-/*	for(int i=1;i<=n;i++)     //XUAT BANG PHUONG AN
-	   {
-	   for(int j=1;j<=w;j++)
-	      cout<<F[i][j]<<" ";
-	    cout<<endl;
-       }*/
     truyVet(A,n,w);
-    int sum1=0; // tong gia tri phan tu trong mang A
+    int sum1=0;
      for(int i=1;i<=n;i++)
       {
-      	 if(dapan[i]==true)      
-      	    sum1=sum1+A[i];
+      	 if(dapan[i]==true)
+      	    sum1=sum1+A[i];   //Phan cac phan tu vao nhom A 
 	  }
-	int sum2=tongkeo-sum1;  //tong gia tri phan tu trong mang  B
-	int kq=abs(sum1-sum2);   // do chenh lech nho nhat
+	int sum2=tongMang-sum1;  //Phan tu cua nhom B
+	int kq=abs(sum1-sum2);
 	cout<<kq;
-	 /* for(int i=1;i<=n;i++)
-	     cout<<dapan[i]<<" ";*/
 }
 void nhapMang(int A[],int &n,int &w)
 {
@@ -49,7 +38,7 @@ void nhapMang(int A[],int &n,int &w)
 	   cin>>A[i];
 	for(int i=1;i<=n;i++)
 	  w=w+A[i];
-	w=w/2;
+	w=w/2;   
 }
 void taoBang(int A[],int n,int w)
 {
@@ -80,7 +69,7 @@ void truyVet(int A[],int n,int w)
     	   {
 			 if(F[k][v]>F[k-1][v])
     	         {
-				 dapan[k]=true;
+				   dapan[k]=true;
     	           v=F[k][v]-A[k];
     	           break;
     	         }
