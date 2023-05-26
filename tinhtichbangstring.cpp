@@ -35,12 +35,10 @@ string tinhTich(string A,string B)
 	   	        if(nho>0)
 	   	        C[iA+iB]=char(nho+'0');
 	   	}
-	if(C[iA+iB-1]!='0')
-	   C[iA+iB]='\0';
-	else 
-	   C[iA+iB-1]='\0';
-	daoNguoc(C); 
-	//C.erase(C.begin()+0);
+
+	if(C[iA+iB-1]=='0')
+	    C.erase(C.begin()+iA+iB-1);
+    daoNguoc(C); 
 	return C;
 }
 void daoNguoc(string &S)

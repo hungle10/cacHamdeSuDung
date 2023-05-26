@@ -4,7 +4,6 @@
 using namespace std;
 string chiaSoLon(string A,long long b);
 void xoaSo0Dau(string &S);
-void daoNguoc(string &S);
 int main()
 {
 	string s1;
@@ -38,7 +37,4 @@ void xoaSo0Dau(string &S)
 		    S.erase(S.begin() + 0); 
 	}
 }
-void daoNguoc(string &S)
-{
-	reverse(S.begin(),S.end());
-}
+
