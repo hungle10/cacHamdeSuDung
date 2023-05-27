@@ -20,7 +20,7 @@ void maDiTuan(int x,int y)
 	if(dem==n*n)
 	{
 		xuat();
-		exit(0);
+	    exit(0);
 	}
 	for(int i=0;i<8;i++)
 	   {

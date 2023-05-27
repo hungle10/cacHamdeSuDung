@@ -1,3 +1,5 @@
+//tong gia tri cac so nguyen co trong mot chuoi 
+//ChuUOI 2AS34ASDF342B có tOng là 2+34+342=378
 #include<string.h>
 #include<iostream>
 #define SIZE 100

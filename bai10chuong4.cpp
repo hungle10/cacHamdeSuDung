@@ -1,3 +1,4 @@
+//tim phan tu xuat hien nhieu nhat trong mang
 #include<iostream>
 void nhap(int A[],int &n);
 void xuLy(int A[],int B[],int n,int &nB);

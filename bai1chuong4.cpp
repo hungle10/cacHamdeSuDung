@@ -1,3 +1,5 @@
+//cap phat dong
+//de quy tim gia tri nho nhat cac phan tu trong mang 1D
 #include<iostream>
 void nhap(int A[],int n);
 int timMin(int A[],int n);

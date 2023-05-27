@@ -1,3 +1,5 @@
+//DE QUY
+//CAP PHAT DONG TIM TONG CAC PHAN TU TRONG MANG 1D
 #include<iostream>
 void nhap(int A[],int n);
 int tinhTong(int A[],int n);

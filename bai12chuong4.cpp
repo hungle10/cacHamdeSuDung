@@ -1,3 +1,4 @@
+//LIET KE TAT CA TAP CON CUA TAP N PHAN TU 
 #include<iostream>
 using namespace std;
 int B[100];

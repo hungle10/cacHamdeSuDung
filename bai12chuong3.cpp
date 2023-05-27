@@ -1,3 +1,5 @@
+//1  +  (1 +2)+  (1 +2 +3)+   ...   +  (1 +2 +3 +...+n)
+//n * (n + 1) * (n + 2) / 6;
 #include<iostream>
 #include<string.h>
 #define SIZE 100

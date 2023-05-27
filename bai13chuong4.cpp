@@ -1,3 +1,4 @@
+//LIET KE TAT CA CAC HOAN VI
 #include<iostream>
 using namespace std;
 int B[100]={0};

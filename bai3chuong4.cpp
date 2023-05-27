@@ -1,3 +1,4 @@
+//n! bang de quy 
 #include<iostream>
 long long tinhGiaiThua(int n);
 int main()

@@ -1,3 +1,4 @@
+//tim kiem nhi phan DE QUY
 #include<iostream>
 #define SIZE 100
 int binarySearch(int A[],int l,int r,int x);

@@ -1,3 +1,4 @@
+//UCLN cua mang
 #include<iostream>
 void nhap(int A[],int &n);
 int timUCLNMang(int A[],int n);
