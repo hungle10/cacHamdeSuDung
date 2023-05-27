@@ -4,7 +4,7 @@
 using namespace std;
 void quyHoachDongTaoBang(string s1,string s2,string dapan[][101]);
 string soSanh(string s1,string s2);
-void chen(string S,int k);
+void chen(string &S,int k);
 void latNguoc(string &S);
 void khoiTao(string dapan[][101]);
 void xoaSo0(string &s);
@@ -45,12 +45,12 @@ string soSanh(string s1,string s2)
 	   return s1;
 	return s2;
 }
-void chen(string S,int k)
+void chen(string &S,int k)
 {
 	latNguoc(S);
 	int l=S.length();
 	for(int i=0;i<k;i++)
-	   S[l+i]='0';
+	   S.push_back('0');
     latNguoc(S);
 }
 void latNguoc(string &S)
@@ -64,9 +64,8 @@ void khoiTao(string dapan[][101])
 	   for(int j=0;j<101;j++)
 	     dapan[i][j]="";
 }
-void xoaSo0(string &s)
+void xoaSo0(string &S)
 {
-	while(s[0]=='0')
-	   s.erase(s.begin());
+ while(S[0]=='0'&&S.length()>1)
+	        S.erase(S.begin()+0);
 }
-	       
