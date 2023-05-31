@@ -32,7 +32,7 @@ string chiaSoLon(string A,long long b)
 }
 void xoaSo0Dau(string &S)
 {
-	while(S[0]=='0')
+	while(S[0]=='0'&&S.length()>0)
 	{
 		    S.erase(S.begin() + 0); 
 	}
