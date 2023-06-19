@@ -24,8 +24,9 @@ int main()
 	          	   F[i][j]=max(F[i][j-1],F[i-1][j]);
 	          	}
 	        }
+	cout<<F[m][n];
 	// truy vet 
-	char P[10000];
+/*	char P[10000];
 	int nP=0;
 	int x=F[m][n];
 	for(int i=m;i>=0;i--)
@@ -42,7 +43,7 @@ int main()
 	   	}
 	P[nP++]='\0';
 	strrev(P);
-	xuat(P,nP);
+	xuat(P,nP);*/
 }
 void xuat(char X[],int nX)
 {

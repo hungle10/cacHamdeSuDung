@@ -9,19 +9,19 @@ int main()
     int l[10000];
 	int n;
 	nhapMang(A,n);
-	A[0]=-100000;
+    A[0]=-100000;
 	A[n+1]=100000;
-	for(int i=1;i<=n+1;i++)
+	for(int i=0;i<=n+1;i++)
 	   {
 	   	l[i]=1;
 	   	 for(int j=0;j<i;j++)
 	   	     {
-                if(A[j]<A[i]&&l[i]<l[j]+1)
+               if(A[j]<A[i]&&l[i]<l[j]+1)
                   l[i]=l[j]+1;
 	   	     }
 	   	}
 		
-     //cout<<l[n+1]-2; //neu de keu xuat ra do dai 
+    cout<<l[n+1]-2; //neu de keu xuat ra do dai 
     double P[10000];     //truy vet day con 
     int iP=0;
 	double x=l[n];
@@ -36,12 +36,13 @@ int main()
 void nhapMang(double A[],int &n)
 {
 	cin>>n;
+	int w;
 	for(int i=1;i<=n;i++)
-	   cin>>A[i];
+	   cin>>A[i]>>w;
 }
 void xuat(double X[],int n)
 {
-	for(int i=0;i<n;i++)
+	for(int i=n-1;i>=0;i--)
 	   cout<<X[i]<<" ";
 }
 
